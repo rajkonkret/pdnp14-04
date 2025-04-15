@@ -21,7 +21,7 @@ except Exception as e:  # pozostałe błedy
 else:  # gdy nie ma błędu
     print("Wynik", wynik)
 finally:  # wykona się zawsze
-    print("Konirec dziąłania")
+    print("Koniec dziąłania")
 print("Program nadal działa")
 # Błąd typu
 # Program nadal działa
