@@ -31,3 +31,38 @@ del tupla_liczby  # mozna usunąć całą tuplę
 
 print(tupla_imiona.index("Radek"))  # numer indexu 0
 print(tupla_imiona.count("Radek"))  # występuje jeden raz
+
+# rozpakowanie tupli
+tup = 1, 2
+print(type(tup))  # <class 'tuple'>
+
+a, b = 1, 2
+print(a, b)  # 1 2
+
+a, b = tup
+print(a, b)  # 1 2
+
+tup2 = 1, 2, 3
+# a, b = tup2 # ValueError: too many values to unpack (expected 2)
+a, *b = tup2  # * worek na dane
+print(a, b)  # 1 [2, 3]
+
+print(tupla_imiona)  # ('Radek', 'Tomek', 'Zenek', 'Mateusz')
+# name1, name2, name3
+
+name1, name2, *name3 = tupla_imiona
+print(name1, name2, name3)
+# Radek Tomek ['Zenek', 'Mateusz']
+name1, *name2, name3 = tupla_imiona
+print(name1, name2, name3)
+# Radek ['Tomek', 'Zenek'] Mateusz
+*name1, name2, name3 = tupla_imiona
+print(name1, name2, name3)
+# ['Radek', 'Tomek'] Zenek Mateusz
+
+# sortowani etupli zwraca liste
+print(sorted(tupla_imiona))
+# ['Mateusz', 'Radek', 'Tomek', 'Zenek']
+print(tupla_imiona)  # ('Radek', 'Tomek', 'Zenek', 'Mateusz')
+print(type(tupla_imiona))  # <class 'tuple'>
+print(type(sorted(tupla_imiona)))  # <class 'list'>
