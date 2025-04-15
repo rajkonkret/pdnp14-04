@@ -103,4 +103,24 @@ print(lista)
 print(lista.pop(-2))  # Roman
 print(lista.pop())  # Roman  usunie ostatni element
 
+a = 1
+b = 3
+a = b
+print(f"{a=}, {b=}") # a=3, b=3
+b = 9
+print(f"{a=}, {b=}") # a=3, b=9
 
+lista_2 = lista # odpowiednik a = b, kopia adresu listy, referencji
+lista_copy = lista.copy() # kopia elementów listy
+print(lista) # ['Radek', 'Wojtek', 'Tomek', 'Zenek']
+print(lista_2) # ['Radek', 'Wojtek', 'Tomek', 'Zenek']
+lista.clear() # czyszczenie elementów listy
+print(lista)
+print(lista_2)
+print(lista_copy)
+print(id(lista))
+print(id(lista_2))
+print(id(lista_copy))
+# 2904518693248
+# 2904518693248
+# 2904522112832
