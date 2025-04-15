@@ -65,3 +65,42 @@ print(lista[::2])  # ['Radek', 'Zenek', 'Maciek']
 print(lista[::-1])
 # wyświetla odwróconą listę
 # ['Anna', 'Maciek', 'Emilia', 'Zenek', 'Tomek', 'Radek']
+
+# nadpisanie elemntu w liście
+lista[3] = "Roman"
+print(lista)
+# ['Radek', 'Tomek', 'Zenek', 'Roman', 'Maciek', 'Anna']
+
+# dopisanie do listy na wskazanym indeksie
+lista.insert(1, "Wojtek")
+print(lista)
+# ['Radek', 'Wojtek', 'Tomek', 'Zenek', 'Roman', 'Maciek', 'Anna']
+
+lista.insert(15, 'Tadeusz')
+print(lista)
+# ['Radek', 'Wojtek', 'Tomek', 'Zenek', 'Roman', 'Maciek', 'Anna', 'Tadeusz']
+
+# sprawdzenie indeksu dla elemntu
+print(lista.index("Tadeusz"))
+lista.append("Roman")
+print(lista)
+print(lista.index("Roman"))  # index numer 4
+
+numer_anna = lista.index("Anna")
+print(numer_anna)  # index 6
+
+# usunięcie elemntu z listy po indeksie
+lista.remove("Anna")
+print(lista)
+
+# usunięcie po indeksie
+lista.pop(5)
+print(lista)
+# ['Radek', 'Wojtek', 'Tomek', 'Zenek', 'Roman', 'Tadeusz', 'Roman']
+print(lista.pop(5))  # Tadeusz, zwraca usunięty element
+print(lista)
+# ['Radek', 'Wojtek', 'Tomek', 'Zenek', 'Roman', 'Roman']
+print(lista.pop(-2))  # Roman
+print(lista.pop())  # Roman  usunie ostatni element
+
+
