@@ -39,5 +39,29 @@ products = [
 ]
 
 for product in products:
-    print(product) # {'sku': 5, 'exp_date': datetime.date(2025, 4, 16), 'price': 199}
-    print(product['exp_date'])
+    # print(product)  # {'sku': 5, 'exp_date': datetime.date(2025, 4, 16), 'price': 199}
+    # print(product['exp_date'])
+    if product['exp_date'] != today:  # != różne
+        continue
+    product['price'] *= 0.8  # p = p * 0.8
+    print('Zmiana ceny')
+    print(f"""
+Price for sku {product['sku']}
+is now {product['price']}""")
+# -------------------
+# Zmiana ceny
+#
+# Price for sku 1
+# is now 160.0
+# Zmiana ceny
+#
+# Price for sku 2
+# is now 80.0
+# Zmiana ceny
+#
+# Price for sku 4
+# is now 60.792
+# Zmiana ceny
+#
+# Price for sku 5
+# is now 159.20000000000002
