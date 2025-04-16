@@ -75,17 +75,44 @@ print(f'Rabat wynosi {rabat}')
 
 # napisac program test z...
 #
-punkty = 0
-odp = input("Podaj datę chrztu Polski")  # str
-if odp.strip().casefold() == "966":
-    print("dobrze")
-    punkty += 1  # punkty = punkty + 1
-else:
-    print("Idź sie pouczyć")
-
-print("Zdobyte punkty:", punkty)
+# punkty = 0
+# odp = input("Podaj datę chrztu Polski")  # str
+# if odp.strip().casefold() == "966":
+#     print("dobrze")
+#     punkty += 1  # punkty = punkty + 1
+# else:
+#     print("Idź sie pouczyć")
+#
+# print("Zdobyte punkty:", punkty)
 # spam += 1    spam = spam + 1
 # spam -= 1    spam = spam - 1
 # spam *= 1    spam = spam * 1
 # spam /= 1    spam = spam / 1
 # spam %= 1    spam = spam % 1
+#
+# zasymulujemy system zbierania logów
+# zmienna bedzie zawierac informacje jaki system
+# email, console, inny
+# console -> "Stało się coś strasznego"
+# email -> "System email"
+# jezeli system email to do listy błedow ma dodac opis błedy
+# zmienna dodakowa -> error, medium, inny
+
+alert_system = "email"
+error_level = "error"
+lista_b = []
+
+if alert_system == "console":
+    print("Stało się coś strasznego")
+elif alert_system == "email":
+    print("System email")
+    if error_level == "error":
+        lista_b.append("Krytyczny")
+    elif error_level == "medium":
+        lista_b.append("Ostrzeżenie")
+    else:
+        print("Inny błąd")
+else:
+    print("Inny system")
+# System email
+print(lista_b)
