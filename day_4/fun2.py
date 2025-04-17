@@ -28,4 +28,4 @@ zm = oblicz_vat(1000)
 if zm == 1230:
     print("Ok")
 
-print(dodaj(5, 6) + dodaj(4, 5)) # 20
+print(dodaj(5, 6) + dodaj(4, 5))  # 20
