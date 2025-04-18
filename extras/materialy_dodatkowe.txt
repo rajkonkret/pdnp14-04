@@ -129,3 +129,6 @@ git config --global user.email "Radek@radek.pl"
 https://www.hackerrank.com/challenges/py-hello-world/problem?isFullScreen=true
 https://www.w3schools.com/python/python_casting.asp
 https://pl.altapps.net/soft/hackerrank-com?page=3
+
+ pip freeze > requirements.txt
+  pip install -r .\requirements.txt
