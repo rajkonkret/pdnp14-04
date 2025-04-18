@@ -19,6 +19,19 @@ try:
     cursor.execute(query)
     sql_connection.commit()
 
+    insert = """
+    INSERT INTO developers (id,name,email,salary) VALUES (1,'Radek','radek@radek.pl',10000);
+    """
+    # cursor.execute(insert)
+    # sql_connection.commit()
+
+    select = """
+    SELECT * FROM developers;
+    """
+
+    for row in cursor.execute(select):
+        print(row)  # (1, 'Radek', 'radek@radek.pl', 10000.0)
+
 except sqlite3.Error as e:
     print('Błąd', e)
 finally:
